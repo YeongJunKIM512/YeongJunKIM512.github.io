@@ -210,24 +210,30 @@ a {
     /* 둥근 모서리의 너비만큼 숨겨주기 */
 }
 
+.mobile {
+    background-color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    display: none;
+}
+
+.mobile>ul>li>a {
+    font-size: 1.75rem;
+    display: block;
+    /* 한 줄 전체를 차지하게 설정 */
+    margin-top: 2rem;
+}
+
 /* 사이드바 끝 */
 
 /* Mobile - Portrait */
 @media (max-width: 768px) {
-    :root {
-        --side-bar-width: 150px;
-        --side-bar-height: 90vh;
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
     }
 
-    .side-bar ul>li>a {
-        font-size: 1.0rem;
-    }
-
-    .main-title {
-        font-size: 2rem;
-    }
-
-    .side-bar {
-        transform: translate(calc(var(--side-bar-width) * -0.2), 0)
-    }
 }
