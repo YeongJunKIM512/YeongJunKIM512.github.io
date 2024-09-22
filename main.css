@@ -30,7 +30,7 @@ div {
 
 .main-title {
     color: white;
-    font-size: 60px;
+    font-size: 3rem;
     margin-top: 200px;
 }
 
@@ -211,3 +211,23 @@ a {
 }
 
 /* 사이드바 끝 */
+
+/* Mobile - Portrait */
+@media (max-width: 768px) {
+    :root {
+        --side-bar-width: 150px;
+        --side-bar-height: 90vh;
+    }
+
+    .side-bar ul>li>a {
+        font-size: 1.0rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .side-bar {
+        transform: translate(calc(var(--side-bar-width) * -0.2), 0)
+    }
+}
